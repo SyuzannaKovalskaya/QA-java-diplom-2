@@ -11,24 +11,14 @@ import static org.hamcrest.core.IsEqual.equalTo;
 
 public class CreateUserTest extends BaseUserTest {
 
-    //    @Test
-//    public void createNewUniqueUserTest() {
-//        String email = String.format("Alex%d", ((int) (Math.random() * (9999 - 1111) + 1111))) + "@gmail.com";
-//        String password = "123456";
-//        DtoUser user = new DtoUser(email, password, "Bot");
-//        Response response = UserRequests.createUser(user);
-//        response.then().assertThat()
-//                .statusCode(200)
-//                .body("success", equalTo(true));
-//    }
-
     @Test
     public void createAndDeleteNewUniqueUserTest() {
         DtoUser user = new DtoUser();
         Response response = UserRequests.createUser(user);
+        response.then().assertThat()
+                .statusCode(200)
+                .body("success", equalTo(true));
         dtoUserResponse = response.as(DtoUserResponse.class);
-
-
     }
 
     @Test

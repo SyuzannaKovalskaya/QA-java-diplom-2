@@ -51,6 +51,4 @@ public class DtoUser {
     public void setName(String name) {
         this.name = name;
     }
-
-
 }

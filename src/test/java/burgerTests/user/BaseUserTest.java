@@ -12,7 +12,7 @@ public class BaseUserTest extends BaseTest {
 
     @After
     public void afterTest() {
-        if (null != dtoUserResponse.getToken()) {
+        if (null != dtoUserResponse) {
             UserRequests.deleteUser(dtoUserResponse)
                     .then().statusCode(202)
                     .body("success", equalTo(true))

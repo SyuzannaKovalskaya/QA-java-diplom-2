@@ -4,4 +4,6 @@ package burgerTests.order;
 //неавторизованный пользователь.
 
 public class GetOrder extends BaseOrderTest {
+
+
 }

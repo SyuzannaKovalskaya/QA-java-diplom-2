@@ -6,10 +6,9 @@ package burgerTests.user;
 //Для обеих ситуаций нужно проверить, что любое поле можно изменить.
 //Для неавторизованного пользователя — ещё и то, что система вернёт ошибку.
 
-import burgerTests.BaseTest;
 import dto.DtoUser;
 import dto.dtoResponse.DtoUserResponse;
-import help.Generate;
+import help.GenerateUser;
 import io.restassured.response.Response;
 import org.junit.Test;
 import requests.UserRequests;
@@ -36,7 +35,7 @@ public class ChangingUserDataTest extends BaseUserTest {
         DtoUserResponse dtoUserResponse = response.as(DtoUserResponse.class);
         this.dtoUserResponse = dtoUserResponse;
 
-        DtoUser userEmail = new DtoUser(Generate.generateEmail(), user.getPassword(), user.getName());
+        DtoUser userEmail = new DtoUser(GenerateUser.generateEmail(), user.getPassword(), user.getName());
         UserRequests.updateUserWithToken(dtoUserResponse, userEmail)
                 .then()
                 .statusCode(200)

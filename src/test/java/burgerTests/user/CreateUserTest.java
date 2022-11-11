@@ -9,10 +9,10 @@ import requests.UserRequests;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 
-public class CreateUserTest extends BaseUserTest {
+public class CreateUserTest extends BaseTest {
 
     @Test
-    public void createAndDeleteNewUniqueUserTest() {
+    public void createNewUniqueUserTest() {
         DtoUser user = new DtoUser();
         Response response = UserRequests.createUser(user);
         response.then().assertThat()

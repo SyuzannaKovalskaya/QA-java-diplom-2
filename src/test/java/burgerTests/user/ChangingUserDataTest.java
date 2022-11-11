@@ -1,11 +1,6 @@
 package burgerTests.user;
 
-//Изменение данных пользователя:
-//с авторизацией,
-//без авторизации,
-//Для обеих ситуаций нужно проверить, что любое поле можно изменить.
-//Для неавторизованного пользователя — ещё и то, что система вернёт ошибку.
-
+import burgerTests.BaseTest;
 import dto.DtoUser;
 import dto.dtoResponse.DtoUserResponse;
 import help.GenerateUser;
@@ -15,7 +10,7 @@ import requests.UserRequests;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 
-public class ChangingUserDataTest extends BaseUserTest {
+public class ChangingUserDataTest extends BaseTest {
     @Test
     public void changeUserDataWithoutAuthorizationTest() {
         DtoUser user = new DtoUser();

@@ -1,7 +1,4 @@
 package burgerTests.user;
-//Логин пользователя:
-//логин под существующим пользователем,
-//логин с неверным логином и паролем.
 
 import burgerTests.BaseTest;
 import dto.DtoUser;
@@ -12,7 +9,7 @@ import requests.UserRequests;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 
-public class LoginUserTest extends BaseUserTest {
+public class LoginUserTest extends BaseTest {
 
     @Test
     public void createAndLoginUserTest() {

@@ -1,6 +1,5 @@
 package dto.ingredients;
 
-
 public class DtoIngredient {
 
     private String _id;
@@ -11,7 +10,6 @@ public class DtoIngredient {
     private int carbohydrates;
     private int calories;
     private int price;
-
 
 
     public String get_id() {

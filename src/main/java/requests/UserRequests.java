@@ -17,7 +17,6 @@ public class UserRequests {
     }
 
     public static Response deleteUser(DtoUserResponse dtoUserResponse) {
-        //String token = createUser(user).getHeader("authorization");
         return given().log().all()
                 .header("Content-type", "application/json")
                 .header("authorization", dtoUserResponse.getToken())

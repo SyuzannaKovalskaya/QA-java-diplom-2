@@ -1,23 +1,10 @@
 package requests;
 
-import dto.DtoUser;
 import dto.dtoResponse.DtoUserResponse;
-import dto.ingredients.DtoIngredient;
 import dto.order.DtoOrderRequest;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
-
-//Создание заказа:
-//с авторизацией,+
-//без авторизации,+
-//с ингредиентами,
-//без ингредиентов,
-//с неверным хешем ингредиентов.
-//Получение заказов конкретного пользователя:
-//авторизованный пользователь,
-//неавторизованный пользователь.
-
 
 public class OrderRequests {
     public static Response createOrderWithAuthorization(DtoUserResponse dtoUserResponse, DtoOrderRequest dtoOrderRequest) {

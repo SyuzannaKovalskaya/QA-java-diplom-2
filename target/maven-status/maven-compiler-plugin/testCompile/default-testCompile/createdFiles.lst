@@ -1,0 +1,6 @@
+burgerTests/order/GetOrderTest.class
+burgerTests/order/CreateOrderTest.class
+burgerTests/BaseTest.class
+burgerTests/user/CreateUserTest.class
+burgerTests/user/ChangingUserDataTest.class
+burgerTests/user/LoginUserTest.class

@@ -1,13 +1,6 @@
 package burgerTests.order;
-//Создание заказа:
-//с авторизацией,
-//без авторизации,
-//с ингредиентами,
-//без ингредиентов,
-//с неверным хешем ингредиентов.
 
 import burgerTests.BaseTest;
-import burgerTests.user.BaseUserTest;
 import dto.DtoUser;
 import dto.dtoResponse.DtoUserResponse;
 import dto.ingredients.DtoIngredient;
@@ -24,7 +17,7 @@ import java.util.List;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 
-public class CreateOrder extends BaseUserTest {
+public class CreateOrderTest extends BaseTest {
 
     @Test
     public void createNewOrderWithAuthorizationAndWithIngredientsTest() {
@@ -98,7 +91,7 @@ public class CreateOrder extends BaseUserTest {
 
     @Test
     public void createNewOrderWithoutAuthorizationAndWithoutIngredientsTest() {
-        OrderRequests.createOrderWithoutAuthorization( null)
+        OrderRequests.createOrderWithoutAuthorization(null)
                 .then().assertThat()
                 .statusCode(400)
                 .body("success", equalTo(false))
